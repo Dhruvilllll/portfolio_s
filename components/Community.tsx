@@ -29,7 +29,7 @@ export default function Community() {
             <Award size={40} className="text-highlight-yellow" />
             <div>
               <h4 className="text-2xl font-black tracking-tighter">Certifications</h4>
-              <p className="text-white/60 font-bold">Professional ML Engineering & Data Science.</p>
+              <p className="text-white/60 font-bold">Professional ML and  Engineering & Data Science.</p>
             </div>
           </motion.div>
         </div>
