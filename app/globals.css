@@ -5,37 +5,58 @@
   --color-neon-purple: #a06cd5;
   --color-electric-purple: #9333ea;
   --color-cyber-green: #4ade80;
-  --color-bright-orange: #f97316;
-  --color-highlight-yellow: #facc15;
 }
 
 :root {
-  --background: #12002b;
-  --foreground: #ffffff;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Forces the browser to animate every scroll link */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #12002b;
+  color: #ffffff;
   font-family: 'Plus Jakarta Sans', sans-serif;
   overflow-x: hidden;
 }
 
-/* Updated Glassmorphism for Rounded Square Look */
+/* Glassmorphism for the Top Strip and Floating Dock */
+@utility glass-nav {
+  background: rgba(18, 0, 43, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 @utility glass-card {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 2.5rem; /* The "Rounded Square" look */
+  border-radius: 2.5rem;
 }
-
 .bg-mesh {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: #12002b;
-  background-image: 
-    radial-gradient(at 0% 0%, hsla(273, 67%, 58%, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, hsla(252, 69%, 43%, 0.1) 0px, transparent 50%);
+  background-color: #12002b;
+  overflow: hidden;
+}
+
+.bg-mesh::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(147, 51, 234, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 70% 20%, rgba(160, 108, 213, 0.12) 0%, transparent 35%),
+    radial-gradient(circle at 50% 80%, rgba(74, 222, 128, 0.05) 0%, transparent 30%),
+    radial-gradient(circle at 20% 70%, rgba(147, 51, 234, 0.1) 0%, transparent 40%);
+  animation: mesh-flow 25s linear infinite;
+  filter: blur(60px);
+}
+
+@keyframes mesh-flow {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
 }

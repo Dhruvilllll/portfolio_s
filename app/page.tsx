@@ -12,12 +12,14 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import LoadingScreen from "../components/LoadingScreen";
 import ScrollReveal from "../components/ScrollReveal";
+import DevTerminal from "../components/DevTerminal";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
     <main className="relative min-h-screen bg-darkBg">
+      <DevTerminal />
       <AnimatePresence mode="wait">
         {isLoading && (
           <LoadingScreen key="loader" onComplete={() => setIsLoading(false)} />

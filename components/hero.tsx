@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Spline from '@splinetool/react-spline';
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, BrainCircuit } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -20,7 +20,10 @@ export default function Hero() {
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             className="absolute top-20 left-0 glass-card p-6 flex items-center gap-3 shadow-[0_0_30px_rgba(160,108,213,0.2)]"
           >
-            <div className="w-10 h-10 rounded-2xl bg-cyberGreen/20 flex items-center justify-center text-xl">🚀</div>
+            {/* Swapped rocket emoji for BrainCircuit icon as requested */}
+            <div className="w-10 h-10 rounded-2xl bg-cyberGreen/20 flex items-center justify-center text-cyberGreen">
+              <BrainCircuit size={24} />
+            </div>
             <p className="text-white text-sm font-bold tracking-tight">Building AI powered systems</p>
           </motion.div>
 
