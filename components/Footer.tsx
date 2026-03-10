@@ -22,16 +22,13 @@ export default function Footer() {
           </span> <br/> with data
         </h2>
 
-        <button className="bg-white text-midnight px-16 py-6 rounded-[2rem] font-black text-2xl hover:scale-105 transition-all shadow-[0_0_50px_rgba(255,255,255,0.2)]">
-          Explore My Work →
-        </button>
-
+        
         <div className="mt-32 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-xs font-black uppercase tracking-[0.3em]">
           <div>© 2026 Dhruvil Malvania</div>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors">GitHub</a>
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+            {/* <a href="#" className="hover:text-white transition-colors">Twitter</a> */}
+            <a href="https://github.com/Dhruvilllll" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/dhruvil-malvania/" className="hover:text-white transition-colors">LinkedIn</a>
           </div>
           <div>Engineered for Intelligence</div>
         </div>
