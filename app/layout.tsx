@@ -15,7 +15,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Dhruvil.",
-
+  description: "Data Scientist & Machine Learning Engineer Portfolio",
+  icons: {
+    // This points to public/logo.png
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -24,11 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-midnight text-white`}
       >
-        <CustomCursor /> {/* Global Cursor */}
+        <CustomCursor /> {/* Global Scanning Reticle Cursor */}
         {children}
       </body>
     </html>
