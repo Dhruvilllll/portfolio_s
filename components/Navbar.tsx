@@ -39,7 +39,7 @@ export default function Navbar() {
           <a href="https://linkedin.com/in/dhruvil-malvania" target="_blank" className="text-white/40 hover:text-white transition-colors"><Linkedin size={22} /></a>
           <button className="bg-white text-midnight font-black px-6 py-2.5 rounded-[1.25rem] text-sm hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] transition-all flex items-center gap-2">
             <a
-              href="https://drive.google.com/file/d/1eMATnmiyU8uvahbNIc_eeIxEpJP7AEg4/view?usp=sharing"
+              href="https://drive.google.com/file/d/1unjkx2DYjffttAo3T-8twFvWWm32VQRB/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               // className="px-6 py-2 bg-neon-purple text-white font-black rounded-full hover:bg-electric-purple transition-all active:scale-95"
